@@ -56,6 +56,11 @@
           まるごとA1リンク
         </h1>
       </div>
+      <button type="button" onclick="downloadSelfHtml()" title="編集したURLを反映したHTMLファイルをダウンロード"
+        class="bg-white/20 hover:bg-white/30 active:scale-95 text-white border border-white/40 text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 transition shrink-0 cursor-pointer shadow-2xs">
+        <i class="fa-solid fa-download text-[11px]"></i>
+        <span>HTML保存</span>
+      </button>
     </header>
 
     <!-- メインコンテンツエリア -->
@@ -1074,7 +1079,7 @@
 
         const a = document.createElement("a");
         a.href = url;
-        a.download = "marugoto_a1_app.html";
+        a.download = "index.html";
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
